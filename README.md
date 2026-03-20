@@ -7,10 +7,10 @@
 
 ## 📌 Problem Statement
 
-India’s gig delivery workers (Zomato, Swiggy) depend on **daily earnings**.
-However, external disruptions like **heavy rain, extreme heat, pollution, or curfews** can suddenly stop their work, causing immediate income loss.
+India’s gig delivery workers (Zomato, Swiggy) rely on **daily earnings**.
+However, disruptions like **heavy rain**, **heat**, **pollution**, or **curfews** can suddenly stop their work, resulting in a loss of immediate earnings.
 
-Currently, there is **no system that protects their daily income** from such uncontrollable events.
+There exists **no system to protect daily earnings** of gig delivery workers from such disruptions that are beyond their control.
 
 ---
 
@@ -18,13 +18,14 @@ Currently, there is **no system that protects their daily income** from such unc
 
 **Coveer** is an **AI-assisted parametric insurance platform** that:
 
-* Monitors real-world disruptions **hourly**
-* Tracks **how long a worker is impacted**
+* Monitors disruptions in the real world **every hour**
+* Monitors **the duration of impact on workers**
 * Calculates **actual income loss**
-* Automatically processes **daily payouts (10 PM settlement)**
+* Processes **daily payouts (10 PM settlement)**
+* Designed **specifically for India’s gig economy scale**
 
 > **🎯 Key Idea:**
-> We don’t verify claims — we **measure real impact and compensate automatically**.
+> We don’t verify claims; we **measure impact and pay automatically**.
 
 ---
 
@@ -32,56 +33,52 @@ Currently, there is **no system that protects their daily income** from such unc
 
 ### Delivery Partner (Swiggy / Zomato)
 
-* Age: 18–35
-* Income Type: **Daily earnings (₹500–₹1500/day)**
-* Work Nature: Outdoor, highly disruption-sensitive
+* Age: 18-45 years
+* Income: **Daily earnings** (500-1500 INR/day)
+* Work Nature: Highly disruption-sensitive; works outdoors
 
-### Pain Points
+### Pain Points:
 
-* Income stops during rain / heat / pollution
-* No safety net for lost working hours
-* Financial instability
-
+* Income stops during rain/heat/pollution
+* No system to protect daily earnings
+* Unstable finances
+  
 ---
 
 ## 🔄 Product Workflow
 
 ### 1. User Onboarding & Verification
 
-* User signs up with:
-
-  * Phone number (**OTP verification**)
-  * Platform identity (**ID / screenshot / mock verification**)
+* User Signs Up With:
+  * Phone Number: OTP Verification
+  * Platform Identity: ID/Screenshot/Mock Verification
 
 - **AI-based Identity Validation**
-  - Image validation model checks whether the uploaded ID/screenshot is genuine or manipulated  
-  - Detects blurred, edited, or duplicate submissions  
+  - AI-based image verification to validate if ID/Screenshot is real or fake  
+  - AI-based image verification to validate if ID/Screenshot is blurry or edited  
 
-- **Location Verification (at login)**
-  - User is required to enable location access  
-  - System verifies whether the user is actually operating in the selected city/zone  
-  - Location consistency is tracked over time to prevent spoofing  
+- **Location Verification**
+  - User has to allow access to location services  
+  - System verifies if the user is actually working in that city/zone  
 
+* **Minimal friction onboarding process (less than 2 minutes)** designed specifically for gig workers  
 
-* **Minimal friction onboarding (under 2 minutes)** designed for gig workers
-
-* System stores:
-
-  * City / working zone
-  * Average daily income
-  * Subscription plan
+* System Stores:
+  * City/Working Zone
+  * Average Daily Income
+  * Subscription Plan  
 
 ---
 
 ### 2. Hourly Disruption Monitoring 🔥
 
-System runs **every hour**:
+**System runs every hour:**
 
-* Weather API (rain, temperature)
-* AQI API (pollution levels)
-* Local disruption signals (mock)
+* Weather API: rain, temperature
+* AQI API: pollution levels
+* Local disruption signals: mock API  
 
-Each hour is marked as:
+Each hour is categorized as:
 
 ```text
 Affected → worker cannot operate normally  
@@ -128,18 +125,23 @@ At **10 PM**, system performs:
 
 ---
 
+## 🔄 System Flow Diagram
+
+![Coveer Banner](./Assets/SystemFlow.png)
+
+---
+
 ## ⚡ Parametric Trigger System
 
-Coveer uses **parametric triggers** to automate payouts.
+For automated payouts, Coveer employs a **parametric trigger system**.
 
-* Real-world events (rain, heat, AQI) are continuously monitored
-* When thresholds are met, the system:
-
+* Continuously monitors real-world events (rain, heat, AQI, etc.)
+* When thresholds are met, it:
   * Identifies affected zones
-  * Matches users in those zones
-  * Automatically initiates payouts
+  * Matches users within those zones
+  * Automatically makes payouts
 
-> No manual claim required — triggers are based purely on external data.
+> **Zero-touch system**, no manual claims or approvals required. Triggers are based on external data.
 
 ---
 
@@ -148,16 +150,16 @@ Coveer uses **parametric triggers** to automate payouts.
 ### Formula
 
 ```text
-Payout = Hourly Income × Affected Hours
+Payout = Hourly Income * Affected Hours
 ```
 
 ### Example
 
 ```text
-Hourly Income = ₹150  
-Affected Hours = 3  
+Hourly Income: ₹150  
+Affected Hours: 3  
 
-Payout = ₹450
+Payout: ₹450  
 ```
 
 ---
@@ -173,33 +175,33 @@ Payout = ₹450
 
 ## 🤖 Role of AI (**Practical & Focused**)
 
-We use AI where it actually adds value:
+The role of AI in our application:
 
 ### 1. Risk-Based Premium Calculation
 
-AI analyzes:
+The application uses AI for:
 
-* City weather patterns
-* Pollution trends
-* Historical disruptions
+* City-level weather pattern analysis  
+* Pollution pattern analysis  
+* Historical disruption analysis  
 
 **Output:**
 
 ```text
-High Risk City → Higher Premium  
-Low Risk City → Lower Premium  
+High Risk City → High Premium  
+Low Risk City → Low Premium  
 ```
 
 ---
 
 ### 2. Disruption Severity Modeling
 
-Instead of binary triggers, Coveer uses **percentage-based impact modeling**:
+Coveer does not use traditional disruption-based triggering methods. Instead, we use **percentage-based impact modeling** for our application:
 
 ```text
-Light Rain → 30% impact (reduced delivery efficiency)  
+Light Rain → 30% impact (reduced efficiency)  
 Heavy Rain → 60% impact (major slowdown)  
-Extreme Conditions → 100% impact (no deliveries possible)  
+Extreme Weather → 100% impact (no deliveries)  
 ```
 
 ---
@@ -209,8 +211,8 @@ Extreme Conditions → 100% impact (no deliveries possible)
 AI detects:
 
 * Repeated abnormal behavior
-* Multiple users showing identical patterns
-* Suspicious activity clusters
+* Multiple users exhibiting the same behavior
+* Clusters of abnormal behavior
 
 ---
 
@@ -218,11 +220,11 @@ AI detects:
 
 ### 🧨 Problem
 
-Fraud rings exploit systems using:
+Fraud rings are exploiting the system by:
 
-* Fake GPS locations
-* Coordinated claims
-* Trigger manipulation
+* Spoofing GPS
+* Making coordinated claims
+* Triggering claims
 
 ---
 
@@ -230,47 +232,45 @@ Fraud rings exploit systems using:
 
 ### 1. No Claim-Based System (**Biggest Defense**)
 
-* Users **do not submit claims**
-* System triggers payouts automatically
+* Users **never make claims**
+* Triggers are automated
 
-👉 Eliminates major fraud entry point
+👉 No claim-based system eliminates the biggest fraud entry point
 
 ---
 
 ### 2. Multi-Layer Location Validation
 
-We verify location using:
+We validate the user's location by:
 
-* GPS consistency
-* IP location matching
+* GPS consistency checks
+* IP matching
 * Historical movement patterns
 
 ---
 
 ### 3. Behavioral Analysis
 
-System detects anomalies like:
+System can identify anomalies such as:
 
 * User always “affected” every day
 * No movement during working hours
-* Unrealistic activity patterns
+* Unreasonable patterns of behavior
 
 ---
 
 ### 4. Cluster Fraud Detection 🔥
 
-We detect fraud rings using:
+We can identify fraud rings through:
 
 * Same location + same timing
-* Similar behavior across users
-* Pattern similarity
+* Similar behavior
+* Similar patterns
 
 **Action:**
 
-```text
 → Flag cluster  
 → Delay or block payouts  
-```
 
 ---
 
@@ -289,7 +289,7 @@ Each user has a **trust score**:
 ### 6. Fairness Mechanism
 
 * First-time users are trusted
-* Soft warnings before strict action
+* Soft warnings instead of strict action
 * Genuine users are not penalized
 
 ---
@@ -297,12 +297,12 @@ Each user has a **trust score**:
 ## 💳 Payout System
 
 * Internal wallet system
-* Instant credit at **10 PM**
-* Transaction history tracking
+* Instant credit for users at **10 PM**
+* Transaction history is tracked
 
 ### Withdrawal Flow
 
-* Users can withdraw wallet balance via:
+* Users can withdraw their wallet amount through:
 
   * UPI
   * Bank transfer
@@ -324,7 +324,7 @@ Each user has a **trust score**:
 
 * Active plan
 * Wallet balance
-* Earnings protected
+* Earnings are always protected
 * Daily impact summary
 
 ---
@@ -335,8 +335,8 @@ Each user has a **trust score**:
 * Active disruptions
 * Fraud alerts
 * Risk zones
-* Loss ratios (premium vs payouts)
-* Predicted high-risk zones (AI insights)
+* Loss ratios (premium and payouts)
+* Predicted high-risk zones (using AI)
 
 ---
 
@@ -348,7 +348,7 @@ Each user has a **trust score**:
 
 **Backend**
 
-* Node.js + Express
+* Node.js + Express.js
 
 **Database**
 
@@ -356,28 +356,28 @@ Each user has a **trust score**:
 
 **APIs**
 
-* OpenWeather API
+* Open Weather API
 * AQI API
-* Mock disruption APIs
+* Disruptions (Mock) API
 
 **AI Layer**
 
-* Python / ML models (risk + fraud detection)
+* Python / ML models for Risk and Fraud Detection
 
 ---
 
 ## 🎯 Why Coveer Stands Out
 
-* Realistic, scalable solution
-* Accurate **time-based compensation**
-* No manual claim dependency
-* Strong fraud resistance
-* Designed for real-world deployment
+* Practical and Scalable
+* Accurate **Time-Based Compensation**
+* No Manual Claim Dependency
+* Robust Anti-Fraud
+* Practical and Deployable
 
 ---
 
 ## 🚀 Conclusion
 
-**Coveer** transforms insurance from a **claim-based system** into a **real-time income protection engine**.
+**Coveer** is a revolutionary change in how we think of **Insurance as a Service**. It moves from a traditional **claim-based system** to a **real-time income protection system**.
 
-It ensures that gig workers are **financially secure**, even when the world around them is unpredictable.
+It provides gig workers with a sense of financial security in a world that is increasingly uncertain.
