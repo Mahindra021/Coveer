@@ -1,9 +1,18 @@
 import { ArrowRight, Search, Wrench, UserCircle } from 'lucide-react';
 import './Hero.css';
+import img1 from '../assets/1.png';
+import img2 from '../assets/2.png';
+import img3 from '../assets/3.png';
+import img4 from '../assets/4.png';
 
 export function Hero() {
   return (
     <div className="hero-container">
+      {/* Corner Images */}
+      <img src={img1} className="corner-img corner-top-left" alt="" />
+      <img src={img2} className="corner-img corner-top-right" alt="" />
+      <img src={img3} className="corner-img corner-bottom-left" alt="" />
+      <img src={img4} className="corner-img corner-bottom-right" alt="" />
       {/* Badge Pills */}
       <div className="badge-container">
         <div className="badge">
@@ -15,21 +24,21 @@ export function Hero() {
       {/* Main Heading */}
       <div className="heading-container">
         <h1 className="hero-heading">
-          AI-Powered <span className="gradient-text">Income Protection</span> For Gig Workers, At Scale.
+          AI-Powered <span className="gradient-text">Income Protection</span><br />
+          For Gig Workers, At Scale.
         </h1>
       </div>
 
       {/* Subtitle */}
       <p className="subtitle">
-        Powering Trillions of Tokens per Month, Chutes is the leading open-source, decentralized compute provider
-        for deploying, scaling and running open-source models in production.
+        Insurance that works as fast as you do.
       </p>
 
       {/* CTA Buttons */}
       <div className="cta-container">
         <button className="btn btn-primary">
           <ArrowRight className="btn-icon" />
-          Get Started
+          Get Protected
         </button>
         <button className="btn btn-secondary">
           <UserCircle className="btn-icon icon-light" />
