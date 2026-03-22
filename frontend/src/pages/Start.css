@@ -478,7 +478,7 @@
 .sf-btn-arrow-enter {
   position: absolute;
   top: 50%;
-  left: calc(50% - 4.5rem);
+  left: calc(50% - 2.4rem);
   transform: translateY(-50%) translateX(-14px);
   opacity: 0;
   display: flex;

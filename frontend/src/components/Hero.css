@@ -172,7 +172,7 @@
 }
 
 .btn-primary:hover .btn-arrow-wrap {
-  transform: translateX(6px);
+  transform: translateX(3px);
 }
 
 .btn-arrow-enter {

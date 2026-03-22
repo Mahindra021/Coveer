@@ -156,8 +156,12 @@
 
 .auth-btn-primary:hover {
   background: #f5f5f5;
-  transform: translateY(-1px);
+  /* transform: translateY(-1px); */
   box-shadow: 0 0 28px 4px rgba(200, 200, 220, 0.12);
+}
+
+.auth-btn-primary:hover .auth-btn-arrow-wrap {
+  transform: translateX(3px);
 }
 
 .auth-btn-primary:active {

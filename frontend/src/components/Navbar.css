@@ -169,7 +169,7 @@
 }
 
 .navbar-cta:hover .navbar-cta-arrow-wrap {
-  transform: translateX(5px);
+  transform: translateX(2px);
 }
 
 .navbar-cta-arrow-enter {
